@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil | JuniorNet</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./feed.html">JuniorNet</a>
+
+    <nav>
+      <a href="./feed.html">Feed</a>
+      <a href="./profile.html">Perfil</a>
+      <button id="logoutBtn" class="logout">Salir</button>
+    </nav>
+  </header>
+
+  <main class="app-layout">
+    <section class="card profile-card">
+      <div class="avatar big" id="profileAvatar">U</div>
+
+      <form id="profileForm">
+        <label>Nombre de usuario</label>
+        <input type="text" id="profileUsername" required minlength="3" />
+
+        <label>Bio</label>
+        <textarea id="profileBio" maxlength="160" placeholder="Contá quién sos..."></textarea>
+
+        <button class="btn primary" type="submit">Guardar perfil</button>
+      </form>
+
+      <p class="message" id="profileMessage"></p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Mis publicaciones</h2>
+      <div id="myPostsContainer" class="posts"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/auth.js"></script>
+  <script type="module" src="./js/profile.js"></script>
+</body>
+</html>
